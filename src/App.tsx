@@ -8,6 +8,7 @@ const techStack = ["HTML5", "CSS3", "React v16"];
 const taskUrl =
   "https://www.testdome.com/questions/react-js/focusable-input/85204";
 
+const githubUrl = "https://github.com/michaltrabski/testdome-examples";
 const FocusableInput = (props: any) => {
   // Write your code here
 
@@ -22,10 +23,9 @@ const FocusableInput = (props: any) => {
   return <input ref={inputRef} />;
 };
 
-export default function App() {
+const Description = () => {
   return (
-    <div className="App">
-      <h1>TestDome</h1>
+    <div>
       <p>
         <strong>Task name:</strong>
       </p>
@@ -45,10 +45,26 @@ export default function App() {
         <a href={taskUrl}>{taskUrl}</a>
       </p>
       <p>
-        <strong>solution:</strong>
+        <strong>Solution on github:</strong>
+      </p>
+      <p>
+        <a href={githubUrl}>{githubUrl}</a>
+      </p>
+      <p>
+        <strong>Solution previev:</strong>
       </p>
       <p>This input should have focus on page load.</p>
+    </div>
+  );
+};
 
+export default function App() {
+  return (
+    <div className="App">
+      <h1>TestDome</h1>
+      <Description />
+      <FocusableInput shouldFocus={false} />
+      <br />
       <FocusableInput shouldFocus={true} />
     </div>
   );
