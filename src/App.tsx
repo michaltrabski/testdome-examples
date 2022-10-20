@@ -1,6 +1,10 @@
 import React from "react";
 import "./styles.css";
 
+const taskName = "Focusable Input";
+const taskDescription =
+  "Finish the FocusableInput component so that the input element automatically receives focus on the first render if the shouldFocus prop is true. The component should use React Hooks.";
+const techStack = ["HTML5", "CSS3", "React v16"];
 const taskUrl =
   "https://www.testdome.com/questions/react-js/focusable-input/85204";
 
@@ -23,19 +27,25 @@ export default function App() {
     <div className="App">
       <h1>TestDome</h1>
       <p>
-        Task name: <strong>Focusable Input</strong>
+        <strong>Task name:</strong>
       </p>
+      <p>{taskName}</p>
       <p>
         <strong>Task Description:</strong>
       </p>
+      <p>{taskDescription}</p>
       <p>
-        Finish the FocusableInput component so that the input element
-        automatically receives focus on the first render if the shouldFocus prop
-        is true. The component should use React Hooks. HTML5, CSS3, React v16
-        (available as React and ReactDOM)
+        <strong>Tech Stack:</strong>
+      </p>
+      <p>{techStack.toString()}</p>
+      <p>
+        <strong>Task source:</strong>
       </p>
       <p>
-        Task source: <a href={taskUrl}>{taskUrl}</a>
+        <a href={taskUrl}>{taskUrl}</a>
+      </p>
+      <p>
+        <strong>solution:</strong>
       </p>
       <p>This input should have focus on page load.</p>
 
